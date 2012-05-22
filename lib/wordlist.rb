@@ -33,4 +33,10 @@ def dropTable
 silent_execute(sql)
 end  
 
+
+def truncateTable
+dropTable
+createTable
+end
+
 end  
