@@ -4,7 +4,7 @@ class Sqlite
   
 def initialize
 #todo: add the location of storage    
-@db  = FMDatabase.new
+@db  = FMDatabase.databaseWithPath("/tmp/development.db")
 @db.open
 #@db.getTableSchema("wordlist")
 end

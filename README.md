@@ -23,7 +23,7 @@ check lib/sqlite.rb for the code
     s.insert_data('Shweta')
     s.insert_data('Sampoorna')
     s.insert_data('Senthil')
-    s.insert_data('WORLD')
+    s.insert_data('HELLO')
     s.insert_data('WORLD')
 
     results= s.find(:all)
@@ -35,9 +35,10 @@ check lib/sqlite.rb for the code
 * insert data
 * find(:first), find(:last),find(:all)
 * result is a array of hash with the key corresponding to the column name
+* data is not persisted beyond a session - solved
 
 # todo
-* data is not persisted beyond a session
+
 * no exception handling, so if you have any sqlite constraints like unique then gives error, or if table already exists
 * data type conversion 
 * need to plan for migration

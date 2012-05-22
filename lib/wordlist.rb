@@ -27,4 +27,10 @@ def insert_data(word)
 end
 
 
+
+def dropTable
+  sql = "drop table wordlist"
+silent_execute(sql)
+end  
+
 end  
