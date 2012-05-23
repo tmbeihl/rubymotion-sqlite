@@ -30,6 +30,24 @@ check lib/sqlite.rb for the code
     [{"word"=>"Shweta", "id"=>"1", "length"=>"6"}, {"word"=>"Sampoorna", "id"=>"2", "length"=>"9"}, {"word"=>"Senthil", "id"=>"3", "length"=>"7"},{"word"=>"HELLO", "id"=>"4", "length"=>"5"},{"word"=>"WORLD", "id"=>"5", "length"=>"5"}]
 
 
+# persistence works, exit the app and start again
+
+    (main)>  w = Wordlist.new
+    => #<Wordlist:0x8b2b180 @db=#<FMDatabase:0x8b2b320> @values=nil @table="wordlist">
+    (main)> w.find(:first)
+     first
+    SELECT select * from wordlist limit 1
+    => [{"word"=>"Shweta", "id"=>"1", "length"=>"6"}]
+    (main)> w.length
+    => 6
+    (main)> w.id
+    => 1
+    (main)> w.word
+    => "Shweta"
+
+
+
+
 # what works
 * create table
 * insert data

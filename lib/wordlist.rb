@@ -1,5 +1,21 @@
 class Wordlist < Sqlite
 
+#attr_accessor :id, :word , :length
+
+
+def id
+@values.first["id"].to_i if @values.length ==1  
+end  
+
+def word
+@values.first["word"] if @values.length ==1  
+end  
+
+def length
+@values.first["length"].to_i if @values.length ==1  
+end  
+
+
 
 def initialize
 super

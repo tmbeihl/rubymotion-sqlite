@@ -7,6 +7,7 @@ def initialize
 @db  = FMDatabase.databaseWithPath("/tmp/development.db")
 @db.open
 #@db.getTableSchema("wordlist")
+@values = nil
 end
 
 
@@ -87,7 +88,8 @@ else
 end
 results = []
 while @result.next do a={}; a["word"],a["id"],a["length"]=   @result.stringForColumn("word"),@result.stringForColumn('id'), @result.stringForColumn("length"); results << a; end
-results
+@values = results
+@values
 end
 
 
