@@ -1,2 +1,5 @@
 .DS_Store
 ignore/
+.repl_history
+build/
+vendor/
